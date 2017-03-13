@@ -1,0 +1,248 @@
+:root {
+    --orange: #FF3D00
+}
+
+body {
+    text-align: center;
+    background: #6a3093;
+    transition: all 0.3s ease-out;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    height: 100%;
+    background-color: #6a3093;
+    background: -moz-radial-gradient(center top, ellipse cover, #a044ff 40%, #6a3093 100%);
+    background: -ms-radial-gradient(center top, ellipse cover, #a044ff 40%, #6a3093 100%);
+    background: -o-radial-gradient(center top, ellipse cover, #a044ff 40%, #6a3093 100%);
+    background: -webkit-radial-gradient(center top, ellipse cover, #a044ff 40%, #6a3093 100%);
+    background: radial-gradient(center top, ellipse cover, #a044ff 40%, #6a3093 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#main {
+    transition: 0.5s;
+}
+a{
+    color: var(--orange);
+}
+.title {
+    color: #fff;
+    font-size: 50px;
+}
+
+input,
+button {
+    border-radius: 3px;
+    outline: none;
+    border: 2px solid transparent;
+    transition: 0.5s;
+}
+
+input:focus,
+input:hover {
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: var(--orange);
+    color: #fff;
+}
+
+button:hover {
+    background-color: #FF5722;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+}
+
+.weather {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#hum,
+#desc {
+    display: none;
+}
+
+.time {
+    color: #ddd;
+    margin-top: 10%;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.hour {
+    font-size: 80px;
+}
+
+.date {
+    font-size: 25px;
+}
+
+#qbutton {
+    background: var(--orange);
+    width: 45px;
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+    padding: 10px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+}
+
+.quickbutton {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background: var(--orange);
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+}
+
+.quickbutton img {
+    width: 42px;
+    height: auto;
+    padding: 10px;
+}
+
+.quickbutton:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.16);
+}
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 500;
+    /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 26px;
+    margin-left: 50px;
+}
+
+.sidenav a:hover {
+    color: var(--orange);
+}
+
+.settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #180030;
+    display: none;
+    opacity: 1;
+    transition: 1s;
+    border-radius: 3px;
+    border: 1px solid black;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/ opacity */
+}
+
+.mdlcontent {
+    margin: 15% auto;
+    width: 80%;
+    background-color: #180030;
+}
+
+.clsset {
+    text-decoration: none;
+    color: var(--orange);
+    padding: 3px 9px 3px 9px;
+    transition: 0.4s ease-out;
+}
+
+.clsset:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 100%;
+    text-shadow: none;
+}
+
+#message {
+    opacity: 1;
+}
+
+.notif {
+    z-index: 101;
+    position: fixed;
+    top: 0%;
+    background-color: #180030;
+    opacity: 1;
+    display: none;
+    transition: 1s ease-in-out;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.vcenter {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.border {
+    border: 1px solid white;
+}
+
+hr {
+    width: 80%;
+    border-color: #2b0442;
+}
+.fa-check-circle{
+    color: limegreen;
+}
