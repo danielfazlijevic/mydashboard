@@ -1,5 +1,26 @@
         var weather = document.querySelector('.weather');
+        var advweather =document.querySelector('.advweather');
+        var moreweather = document.querySelector('#moreweather');
 
+        moreweather.addEventListener('click', ()=> {
+        var sign = moreweather.classList;
+        console.log(sign);
+        if(sign.contains('rotate')){
+
+            advweather.style.display = 'none';
+         
+          sign.remove('rotate');
+          weather.classList.remove('background');
+        }
+        else{
+           advweather.style.display = 'inline-block';
+          // sign.remove('fa-chevron-up');
+          sign.add('rotate');
+          weather.classList.add('background');
+
+        }
+
+        });
         
 
 
@@ -18,13 +39,17 @@
                     tempmin = myArr.main.temp_min;
                     tempmax = myArr.main.temp_max;
                     humidity = myArr.main.humidity;
+                    pressure = myArr.main.pressure;
                     country = myArr.sys.country;
+                    windspeed = myArr.wind.speed;
+                    icon = myArr.cod;
                     var iconUrl = "http://openweathermap.org/img/w/" + myArr.weather[0].icon + ".png";
                     // Show weather
-                    document.getElementById('temp').innerHTML =    temp + '°C';
+                    document.getElementById('temp').textContent =    temp + '°C';
                     document.getElementById('city').textContent = `in ${cityw}.`;
-                    // document.getElementById('desc ').innerHTML = desc + ' ( ' + adesc + ') ';
-                    // document.getElementById('city ').innerHTML = `${city}, ${country}`;
+                     document.getElementById('desc').textContent = desc + ' (' + adesc +') ';
+                    document.getElementById('icon').innerHTML = ` <i class="owf owf-${icon} ml2 owf-5x"></i>`
+                     document.getElementById('hum').innerHTML = `Humidity: ${humidity}% <br> Pressure: ${pressure}hPa <br> Wind speed: ${windspeed}m/s`;
                 }
             };
             xmlhttp.open("GET", url, true);

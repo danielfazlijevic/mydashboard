@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dani's Dashboard</title>
-    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">  
+    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/owfont-regular.min.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -32,10 +33,13 @@
         </div>
         <div class=' weather left mb1 ml2'>
 
-            <p class='h5'>It's currently <span id='temp' class='h1'>Temp</span> <span id='city'>    </span></p>
-            <!--<span id='desc' class='h3'>Desc</span>
-            <span id='hum' class='h4'>Hum</span>          
-            -->
+            <p class='h5'>It's currently <span id='temp' class='h1'>(loading...)</span> <span id='city'>    </span> <i id='moreweather' class="fa fa-chevron-up p1 ml1" aria-hidden="true"></i>
+</p>
+<div class='advweather left-align left'>
+            <span id='icon' class='right'>Loading icon...</span>  
+            <span id='desc' class='h3'>Loading description...</span> <br>
+            <span id='hum' class='h4'>Loading humidity</span>   <br>
+</div>
         </div>
 
         <div class='quickbutton xs-hide' onclick="openNav()"><img src='img/menu.svg'></div>
@@ -44,7 +48,7 @@
 
             <div id='pages'>
             </div>
-            <a href='#' class='right'>Add more <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            <a href='#' onclick='openBookmarks()' class='right'>Edit saved pages <i class="fa fa-plus-circle" aria-hidden="true"></i>
 </a>
             <a href="#" class='right' onclick='openSettings()'>Settings <i class="fa fa-cog" aria-hidden="true"></i></a>
             <!--<img src='img/menu.svg'>-->
@@ -64,9 +68,23 @@
                 <br>
                 <em class=' left mr3 mt3'>Made by <a href='//danielfazlijevic.com'>Daniel Fazlijevic</a></em>
                 <div class="clearfix">
-                <button id='saveset' class='right p2 clearfix'>Save</button>
+                    <button id='saveset' class='right p2 clearfix'>Save</button>
                 </div>
             </div>
+        </div>
+        <div class='addBookmark modal col col-6'>
+            <div class='mdlcontent p2'>
+                <a href="javascript:void(0)" class="closebtn clsset  right h1" onclick="closeBookmarks()">&times;</a>
+                <h2>Bookmarks</h2>
+                <hr>
+                <ul id='bookmarks'>
+
+
+                </ul>
+                </div> 
+
+
+
         </div>
 
         <img id='qbutton' class='lg-hide' onclick='openNav()' src='img/menu.svg'>
@@ -74,7 +92,18 @@
     <script src='script/weather.js'>
     </script>
     <script src='script/main.js'>
-    openSettings();</script>
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-93699401-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 

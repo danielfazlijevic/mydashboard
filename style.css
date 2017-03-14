@@ -1,5 +1,5 @@
 :root {
-    --orange: #FF3D00
+    --orange: #FF3D00;
 }
 
 body {
@@ -18,16 +18,21 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
-    background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
 }
 
 #main {
     transition: 0.5s;
 }
-a{
+
+a {
     color: var(--orange);
 }
+
 .title {
     color: #fff;
     font-size: 50px;
@@ -39,6 +44,14 @@ button {
     outline: none;
     border: 2px solid transparent;
     transition: 0.5s;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
 input:focus,
@@ -67,10 +80,7 @@ button:hover {
     left: 0;
 }
 
-#hum,
-#desc {
-    display: none;
-}
+
 
 .time {
     color: #ddd;
@@ -100,6 +110,10 @@ button:hover {
     -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
     -moz-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
     box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
 }
 
 .quickbutton {
@@ -111,6 +125,10 @@ button:hover {
     -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
     -moz-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
     box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.13);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 .quickbutton img {
@@ -128,23 +146,19 @@ button:hover {
 
 .sidenav {
     height: 100%;
-    /* 100% Full-height */
     width: 0;
-    /* 0 width - change this with JavaScript */
     position: fixed;
-    /* Stay in place */
     z-index: 500;
-    /* Stay on top */
     top: 0;
     right: 0;
     background-color: #111;
-    /* Black*/
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     padding-top: 60px;
-    /* Place content 60px from the top */
     transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
 
@@ -176,6 +190,29 @@ button:hover {
     top: 0;
     left: 0;
     z-index: 1000;
+    background-color: #180030;
+    display: none;
+    opacity: 1;
+    transition: 1s;
+    border-radius: 3px;
+    border: 1px solid black;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/ opacity */
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
     background-color: #180030;
     display: none;
     opacity: 1;
@@ -243,6 +280,47 @@ hr {
     width: 80%;
     border-color: #2b0442;
 }
-.fa-check-circle{
+
+.fa-check-circle {
     color: limegreen;
+}
+#moreweather{
+    background-color: rgba(0,0,0,0.4);
+    border-radius:100%;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    -ms-border-radius:100%;
+    -o-border-radius:100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+#moreweather:hover{
+background-color: rgba(0,0,0,0.6);
+cursor: pointer;
+}
+.advweather{
+    display: none;
+    
+}
+.background{
+     background-color: rgba(0,0,0,0.6);
+     padding: 17px;
+     border-radius: 3px;
+     -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+     -ms-border-radius: 3px;
+     -o-border-radius: 3px;
+}
+.rotate{
+     transform: rotate(180deg);
+     -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
+     -ms-transform: rotate(180deg);
+     -o-transform: rotate(180deg);
+}
+.owf{
+    font-size: 200%;
 }

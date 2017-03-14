@@ -5,6 +5,7 @@ const settings = document.querySelector('.settings');
 const cityset = document.querySelector('#changecity');
 const setbutton = document.querySelector('#saveset');
 const message = document.querySelector('.notif');
+const addBookmark = document.querySelector('.addBookmark');
 
 form.addEventListener('submit', (e) => {
     if (!input.value) {
@@ -36,6 +37,7 @@ var list = JSON.parse(localStorage.pages);
 console.log(list);
 list.forEach(function (el) {
     document.getElementById('pages').innerHTML += `<a href=${el.url}> ${el.name}</a> <br/>`;
+    document.getElementById('bookmarks').innerHTML += `<li class='h4 left-align'> ${el.name} | <a href=${el.url}>${el.url}</a> <span onclick="this.remove()">X</span></li>`
 })
 
 
@@ -71,12 +73,19 @@ function openSettings() {
     settings.style.opacity = 1;
     closeNav();
 }
-
+function openBookmarks() {
+    addBookmark.style.display = 'inline-block';
+    addBookmark.style.opacity = 1;
+    closeNav();
+}
 function closeSettings() {
     settings.style.opacity = 0;
     window.setTimeout(() => settings.style.display = 'none', 1000);
 }
-
+function closeBookmarks() {
+    addBookmark.style.opacity = 0;
+    window.setTimeout(() => addBookmark.style.display = 'none', 1000);
+}
 function fadeOut(elem) {
 
     (elem.style.opacity -= .1) < 0.1 ? elem.display = "none" : setTimeout(fadeOut(elem), 100);
